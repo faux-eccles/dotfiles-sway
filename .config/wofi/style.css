@@ -3,6 +3,49 @@ scheme: "Nord"
 author: "arcticicestudio"
 */
 
+
+
+
+@define-color polar0  #2e3440;
+@define-color polar1  #3b4252;
+@define-color polar2  #434c5e;
+@define-color polar3  #404859;
+@define-color polar4  #4c566a;
+
+/* Snow Storm */
+@define-color snow0  #d8dee9;
+@define-color snow1  #e5e9f0;
+@define-color snow2  #eceff4;
+
+/* Frost */
+@define-color frost0  #8db0AE;
+@define-color frost1  #8fbcbb;
+@define-color frost2  #5c8286;
+@define-color frost3  #88c0d0;
+@define-color frost4  #5e81ac;
+
+/* Aurora */
+@define-color aur1 #bf616a;
+@define-color aur2 #d08770;
+@define-color aur3 #ebcb8b;
+@define-color aur4 #a3be8c;
+@define-color aur5 #b48ead;
+
+/* DARK */
+@define-color bg       @polar0;
+@define-color bg-light @polar4;
+@define-color accent   @frost3;
+@define-color borders  @accent;
+@define-color font     @snow2;
+
+/* LIGHT
+@define-color bg       @snow0;
+@define-color bg-light @show1;
+@define-color accent   @frost2;
+@define-color font     @polar0;
+*/
+
+
 @define-color base10 #2E3440;
 @define-color base00 #3B4252;
 @define-color base02 #434C5E;
@@ -32,13 +75,13 @@ author: "arcticicestudio"
 }
 
 #entry:selected {
-   color: @base0D;
-   background-color: @base02;
+   color: @accent;
+   background-color: transparent;
    padding: 7px;
 }
 
 #text:selected {
-   color: @base04;
+   color: @accent;
 }
 
 #window {
@@ -51,20 +94,20 @@ author: "arcticicestudio"
 
 #input {
    border: none;
-   background-color: @base10;
+   background-color: @bg-light;
    border-radius: 0px;
    margin: 4px 4px 8px 4px;
    padding: 8px;
 }
 
 #inner-box {
-   color: @base04;
+   color: @bg-light;
    border-radius: 0px;
 /* margin-right: 180px; */
 }
 
 #outer-box {
-   background-color: @base00;
+   background-color: @bg;
    border-radius: 0px;
    border: 1px solid #474747;
    padding: 10px;

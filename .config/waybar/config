@@ -2,9 +2,9 @@
     "layer": "top",
     "position": "top",
 
-    "modules-left": ["tray", "custom/launcher", "sway/workspaces", "sway/mode", "sway/window"],
-    "modules-center": ["custom/stub", "custom/spotify", "custom/weather", "clock", "custom/vnc", "custom/stub"],
-    "modules-right": ["custom/keyboard-layout", "backlight", "memory", "battery", "network", "pulseaudio",  "custom/power"],
+    "modules-left": ["tray", "custom/launcher", "sway/workspaces", "sway/mode", "sway/window","custom/stub", "mpris"],
+    "modules-center": ["custom/stub", "clock", "custom/weather", "custom/stub"],
+    "modules-right": ["custom/keyboard-layout", "backlight", "memory", "cpu", "temperature", "network", "pulseaudio",  "custom/power"],
 
     "sway/workspaces": {
         "disable-scroll": true,
@@ -123,17 +123,20 @@
         "format": " {} ",
         "exec": "echo  \":\""
     },
-
-    "custom/spotify": {
-         "exec": "/usr/bin/python3 ~/.config/waybar/scripts/mediaplayer.py --player spotify",
-         "format": " {} ",
-         "return-type": "json",
-         "on-click": "playerctl play-pause",
-         "on-scroll-up": "playerctl next",
-         "on-scroll-down": "playerctl previous"
-     },
-
-     "custom/launcher": {
+ "mpris": {
+        "format": "{status_icon} {dynamic} {player_icon}",
+        "player-icons": {
+            "default": ""
+        },
+        "status-icons": {
+            "playing": "",
+            "paused": "",
+            "stopped": ""
+        },
+        "ignored-players": ["qutebrowser"]
+    }
+,
+         "custom/launcher": {
     	   "format":"| {}  ",
     	   "on-click": "exec nwggrid",
     	   "tooltip": false,
@@ -159,7 +162,7 @@
 
     "custom/power": {
       	"format":" ⏻ ",
-       	"on-click": "nwgbar",
+       	"on-click": "exec nwgbar",
       	"tooltip": false,
     },
 
@@ -178,8 +181,8 @@
     "custom/keyboard-layout": {
          "format": " {}",
       	 "tooltip": false,
-         "exec": "$HOME/.config/waybar/scripts/kblayout.sh"
-         // "on-click": "swaymsg exec alacritty -e ~/.config/sway/scripts/keyhint.sh",
+         "exec": "$HOME/.config/waybar/scripts/kblayout.sh",
+          "on-click": "swaymsg exec 'alacritty -e ~/.config/sway/scripts/keyhints.sh'"
          // "exec": "$HOME/.config/waybar/scripts/kblayout.sh '1:1:AT_Translated_Set_2_keyboard'"
          // "exec": "$HOME/.config/waybar/scripts/kblayout.sh '6700:3620:SEM_USB_Keyboard'"
      },

@@ -1,5 +1,5 @@
 #bar {
-    margin: 30px /* affects top/bottom & left/right alignment */
+    margin: 30px /* affects top/bottom & left/right alignment */;
 }
 
 button, image {
@@ -16,7 +16,7 @@ button {
 }
 
 button:hover {
-    background-color: rgba (255, 255, 255, 0.1)
+    background-color: rgba (255, 255, 255, 0.3)
 }
 
 button:focus {

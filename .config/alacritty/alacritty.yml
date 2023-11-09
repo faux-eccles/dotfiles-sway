@@ -2,30 +2,31 @@
 colors:
   # Default colors
   primary:
-    background:   "#2E3440"
-    foreground:   "#c5c8c6"
+    background:   "#282B28"
+    foreground:   "#DCCCA3"
 
   # Normal colors
   normal:
-    black:    "#1e2127"
-    red:      "#e06c75"
-    green:    "#33cca6"
-    yellow:   "#d19a66"
-    blue:     "#5C8286"
-    magenta:  "#c678dd"
-    cyan:     "#56b6c2"
-    white:    "#c5c8c6"
+    black:    "#1B1C1A"
+    red:      "#741F1C"
+    green:    "#319892"
+    yellow:   "#B2824A"
+    blue:     "#3B408C"
+    magenta:  "#7E3168"
+    cyan:     "#ADBDFF"
+    white:    "#F3EFF5"
 
   # Bright colors
   bright:
-    black:    "#1B2839"
-    red:      "#e06c75"
-    green:    "#33cca6"
-    yellow:   "#d19a66"
-    blue:     "#73AAA9"
-    magenta:  "#c678dd"
-    cyan:     "#56b6c2"
-    white:    "#ffffff"
+    black:    "#343634"
+    red:      "#943C4D"
+    green:    "#B3DEC1" 
+    yellow:   "#E6C229" 
+    blue:     "#08A4BD" 
+    magenta:  "#754F7B"
+    cyan:     "#01BAEF"
+    white:    "#F4F2F5"
+    
 
 # colors:
 #   # Default colors
@@ -57,12 +58,11 @@ colors:
 
 font:
   normal:
-    family: "Hack"
+    family: "Mono"
     style: Regular
-
-  # bold:
-  #   family: "TerminessTTF Nerd Font Mono"
-  #   style: Bold
+#  bold:
+#    family: "Hack"
+#     style: Bold
   # italic:
   #   family: "TerminessTTF Nerd Font Mono"
   #   style: Italic
@@ -71,7 +71,7 @@ font:
   #   style: Bold Italic
 
   # Point size
-  size: 10
+  size: 11
 
   offset:
     x: 0
@@ -81,7 +81,7 @@ window:
   padding:
     x: 10
     y: 10
-  opacity: 0.9
+  opacity: 0.8
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.

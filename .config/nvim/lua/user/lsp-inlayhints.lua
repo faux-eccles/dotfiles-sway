@@ -3,6 +3,8 @@ if not status_ok then
   return
 end
 
+require("lsp-inlayhints").setup()
+
 local group = vim.api.nvim_create_augroup("LspAttach_inlayhints", {})
 vim.api.nvim_create_autocmd("LspAttach", {
   group = "LspAttach_inlayhints",

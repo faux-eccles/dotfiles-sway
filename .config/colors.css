@@ -25,8 +25,9 @@
 
 /* DARK */
 @define-color bg       @polar0;
-@define-color bg-light @polar3;
-@define-color accent   @frost1;
+@define-color bg-light @polar4;
+@define-color accent   @frost3;
+@define-color borders  @accent;
 @define-color font     @snow2;
 
 /* LIGHT

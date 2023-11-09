@@ -13,7 +13,7 @@ set $term-working-dir $term --working-directory=$( swaymsg -r -t get_tree | jq '
 set $menu wofi -c ~/.config/wofi/config -I
 set $launcher nwggrid
 set $powermenu nwgbar
-set $cheat gedit ~/.config/sway/cheatsheet
+set $cheat $term vim -R ~/.config/sway/cheatsheet
 set $filemanager kitty -e ranger
 
 # wob
@@ -99,12 +99,16 @@ bindsym --to-code  {
    # y
    $mod+y			      		exec  ~/.config/sway/scripts/screenshot.sh
    $mod+Shift+y					exec  ~/.config/sway/scripts/screenshot.sh -g
+
+   $mod+c                 exec $cheat
+
+   $mod+Shift+p          exec ~/.config/sway/scripts/mpv.sh
 }
 
 floating_modifier $mod     normal
 
 assign [class="idea"]            1
-assign [class="Google-chrome"]   2
+assign [class="qutebrowser"]   2
 assign [class="Spotify"]         3
 assign [class="Telegram"]        3
 assign [class="Steam"]           4
